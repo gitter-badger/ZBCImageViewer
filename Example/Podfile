@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ZBCImageViewer', :exclusive => true do
+  pod "ZBCImageViewer", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "ZBCImageViewer", :path => "../"
+
+  pod 'Specta', '~> 0.2.1'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+end
