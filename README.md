@@ -18,10 +18,6 @@ it, simply add the following line to your Podfile:
 
     pod "ZBCImageViewer"
 
-## Author
-
-Gustavo Barbosa, gustavocsb@gmail.com
-
 ## License
 
 ZBCImageViewer is available under the MIT license. See the LICENSE file for more info.
