@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZBCCollectionViewController : UIViewController
+@interface ZBCCollectionViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
 @end

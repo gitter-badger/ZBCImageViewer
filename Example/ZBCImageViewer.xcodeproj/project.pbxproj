@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2365A4CB181734898D6FB13B /* libPods-ZBCImageViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2C338374FBFFE569F29113 /* libPods-ZBCImageViewer.a */; };
 		417BA01E2DEB379BA86AF08D /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A459C08B2CB68A834463E60B /* libPods-Tests.a */; };
+		5ED1E2F719FB55FB008AB03F /* ZBCZombieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED1E2F619FB55FB008AB03F /* ZBCZombieCollectionViewCell.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -40,6 +41,8 @@
 		17CF114AC949902B2A9A135D /* Pods-ZBCImageViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBCImageViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZBCImageViewer/Pods-ZBCImageViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		29F52EA9A327D8C4D3778F67 /* Pods-ZBCImageViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBCImageViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZBCImageViewer/Pods-ZBCImageViewer.release.xcconfig"; sourceTree = "<group>"; };
 		342B5291EA155C55D3356729 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5ED1E2F519FB55FB008AB03F /* ZBCZombieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBCZombieCollectionViewCell.h; sourceTree = "<group>"; };
+		5ED1E2F619FB55FB008AB03F /* ZBCZombieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBCZombieCollectionViewCell.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ZBCImageViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBCImageViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +137,8 @@
 			children = (
 				E4B38FDA19FB4E0F00E73F89 /* ZBCCollectionViewController.h */,
 				E4B38FDB19FB4E0F00E73F89 /* ZBCCollectionViewController.m */,
+				5ED1E2F519FB55FB008AB03F /* ZBCZombieCollectionViewCell.h */,
+				5ED1E2F619FB55FB008AB03F /* ZBCZombieCollectionViewCell.m */,
 				6003F59C195388D20070C39A /* ZBCAppDelegate.h */,
 				6003F59D195388D20070C39A /* ZBCAppDelegate.m */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
@@ -361,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED1E2F719FB55FB008AB03F /* ZBCZombieCollectionViewCell.m in Sources */,
 				6003F59E195388D20070C39A /* ZBCAppDelegate.m in Sources */,
 				E4B38FDC19FB4E0F00E73F89 /* ZBCCollectionViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

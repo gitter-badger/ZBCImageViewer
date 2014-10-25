@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CQp-5R-JrR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CQp-5R-JrR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -21,13 +21,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kPH-Jh-rNq">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OPj-lL-ftd">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ZombieCell" id="OPj-lL-ftd" customClass="ZBCZombieCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -47,6 +47,10 @@
                                             <constraint firstItem="skV-P3-1KA" firstAttribute="top" secondItem="OPj-lL-ftd" secondAttribute="top" id="qQv-Bo-ab1"/>
                                         </constraints>
                                         <size key="customSize" width="150" height="150"/>
+                                        <connections>
+                                            <outlet property="zombieImageView" destination="skV-P3-1KA" id="X14-yf-6Zr"/>
+                                            <segue destination="gf1-St-gSF" kind="push" id="x8W-3m-b67"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nsb-ZH-sXJ">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -99,15 +103,41 @@
                                         <size key="customSize" width="150" height="150"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="1gt-au-ayD"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="9PU-3e-Qeo"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="R5D-hg-7d7"/>
+                    <connections>
+                        <outlet property="collectionView" destination="TS7-6s-jjm" id="yqX-zj-r6g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="952" y="450"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pi1-bY-kee">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mup-1M-eLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="gf1-St-gSF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r8R-0Q-0qV"/>
+                        <viewControllerLayoutGuide type="bottom" id="OJI-Dh-BPt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GCh-R7-mpJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XU3-gx-xWk"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1434" y="450"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wGP-vm-Wok">

@@ -7,6 +7,7 @@
 //
 
 #import "ZBCCollectionViewController.h"
+#import "ZBCZombieCollectionViewCell.h"
 
 @interface ZBCCollectionViewController ()
 
@@ -18,6 +19,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+
+#pragma mark - UICollectionView
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ZBCZombieCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZombieCell" forIndexPath:indexPath];
+    
+    [cell.zombieImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"zombie%li", indexPath.row % 5]]];
+    
+    return cell;
+}
+
+#pragma mark - Memory
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
