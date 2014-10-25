@@ -1,0 +1,13 @@
+//
+//  ZBCCollectionViewController.h
+//  ZBCImageViewer
+//
+//  Created by Gustavo Barbosa on 10/25/14.
+//  Copyright (c) 2014 Gustavo Barbosa. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface ZBCCollectionViewController : UIViewController
+
+@end
