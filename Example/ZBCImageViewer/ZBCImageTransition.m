@@ -3,14 +3,13 @@
 //  ZBCImageViewer
 //
 //  Created by Andre Cytryn on 10/25/14.
-//  Copyright (c) 2014 Gustavo Barbosa. All rights reserved.
+//  Copyright (c) 2014 Zombie Coding. All rights reserved.
 //
 
 #import "ZBCImageTransition.h"
 
 #import "ZBCCollectionViewController.h"
 #import "ZBCDestinationViewController.h"
-
 
 
 @implementation ZBCImageTransition

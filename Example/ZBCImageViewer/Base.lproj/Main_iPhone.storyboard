@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CQp-5R-JrR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CQp-5R-JrR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--ZBCImageViewer-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ZBCCollectionViewController" sceneMemberID="viewController">
@@ -61,7 +61,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="R5D-hg-7d7"/>
+                    <navigationItem key="navigationItem" title="ZBCImageViewer" id="R5D-hg-7d7"/>
                     <connections>
                         <outlet property="collectionView" destination="TS7-6s-jjm" id="yqX-zj-r6g"/>
                     </connections>
@@ -73,7 +73,6 @@
         <!--Destination View Controller-->
         <scene sceneID="pi1-bY-kee">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mup-1M-eLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="gf1-St-gSF" customClass="ZBCDestinationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r8R-0Q-0qV"/>
@@ -94,6 +93,7 @@
                         <outlet property="zombieImageView" destination="yQR-v9-uqz" id="fF5-2l-Zc5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mup-1M-eLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1434" y="450"/>
         </scene>
