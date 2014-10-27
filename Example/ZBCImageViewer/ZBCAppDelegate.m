@@ -3,7 +3,7 @@
 //  ZBCImageViewer
 //
 //  Created by CocoaPods on 10/23/2014.
-//  Copyright (c) 2014 Gustavo Barbosa. All rights reserved.
+//  Copyright (c) 2014 Zombie Coding. All rights reserved.
 //
 
 #import "ZBCAppDelegate.h"
