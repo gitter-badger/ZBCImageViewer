@@ -7,9 +7,13 @@
 //
 
 #import "ZBCCollectionViewController.h"
-#import "ZBCZombieCollectionViewCell.h"
 
-@interface ZBCCollectionViewController ()
+#import "ZBCZombieCollectionViewCell.h"
+#import "ZBCDestinationViewController.h"
+#import "ZBCImageTransition.h"
+
+
+@interface ZBCCollectionViewController () <UINavigationControllerDelegate>
 
 @end
 
@@ -18,6 +22,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.navigationController.delegate = self;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    // Stop being the navigation controller's delegate
+    if (self.navigationController.delegate == self) {
+        self.navigationController.delegate = nil;
+    }
 }
 
 
@@ -39,6 +57,28 @@
     [cell.zombieImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"zombie%li", indexPath.row % 5]]];
     
     return cell;
+}
+
+
+#pragma mark UINavigationControllerDelegate methods
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController *)fromVC
+                                                 toViewController:(UIViewController *)toVC {
+    // Check if the transition id form this view controller to destination view controller
+    if (fromVC == self && [toVC isKindOfClass:[ZBCDestinationViewController class]]) {
+        ZBCZombieCollectionViewCell *cell = (ZBCZombieCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:[[self.collectionView indexPathsForSelectedItems] firstObject]];
+        ZBCDestinationViewController *destinationVC = (ZBCDestinationViewController *)toVC;
+        ZBCImageTransition *protocol = [[ZBCImageTransition alloc] init];
+        protocol.originView = cell.zombieImageView;
+        protocol.destinationView = destinationVC.zombieImageView;
+        
+        return protocol;
+    }
+    else {
+        return nil;
+    }
 }
 
 #pragma mark - Memory
